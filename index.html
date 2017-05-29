@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Portfolio</title>
+      <meta charset = "UTF-8" />
+      <link href="https://fonts.googleapis.com/css?family=Montserrat|Poppins&amp;subset=latin-ext" rel="stylesheet">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+      <link href = "css/styles.css" rel = "stylesheet" type = "text/css" />
+   </head>
+<body>
+  <header id="main-header">
+    <nav id="cd-vertical-nav">
+		<ul>
+			<li>
+				<a href="#section1" data-number="1">
+					<span class="cd-dot"></span>
+					<span class="cd-label">Intro</span>
+				</a>
+			</li>
+			<li>
+				<a href="#section2" data-number="2">
+					<span class="cd-dot"></span>
+					<span class="cd-label">Work</span>
+				</a>
+			</li>
+			<li>
+				<a href="#section3" data-number="3">
+					<span class="cd-dot"></span>
+					<span class="cd-label">Bio</span>
+				</a>
+			</li>
+			<li>
+				<a href="#section4" data-number="4">
+					<span class="cd-dot"></span>
+					<span class="cd-label">Contact</span>
+				</a>
+			</li>
+		</ul>
+	</nav>
+    <div class="container-fluid">
+       <div class = "row cd-section" id = "section1"></div>
+       <div class="row header-full"> 
+        <h1 id="head">Front End Design<span>&amp;</span>Development</h1>
+      </div>
+    </div>
+    
+ </header>
+  <main>
+    <div class="container-fluid">
+      <div class="row cd-section" id="section2" >
+        <div class="col-12 text-center">
+          <h2>A Look At My Work</h2>
+        </div>
+        <a href="http://www.isabellalashcoaching.com/" target="blank">
+        <div class="col-8 offset-2 col-md-4 offset-md-2 portfolio-item" id = "bella-coaching">
+          <img src = 
+"https://cloud.githubusercontent.com/assets/28717999/26478991/1cd2d84c-419e-11e7-9832-155312e6ab00.jpg" class = "invis img-fluid" />
+          <a href="http://www.isabellalashcoaching.com/" target="blank">
+            <div class = "overlay">
+            <div class = "overlay-txt">
+              <h3>Isabella Lash Coaching</h3>
+              <p>An acting coach site done for Pier5</p>
+            </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-8 offset-2 col-md-4 offset-md-0 portfolio-item" id = "mcqueen">
+          <a href="https://codepen.io/jRhoades7989/full/XRYvXG/" target="blank"><img src="https://cloud.githubusercontent.com/assets/28717999/26478989/1b2555e2-419e-11e7-8f74-18b0c24d95a6.jpg" alt="Steve Mcqueen Tribute Page" class="img-fluid invis" /></a>
+          <a href="https://codepen.io/jRhoades7989/full/XRYvXG/" target="blank">
+            <div class = "overlay">
+            <div class = "overlay-txt">
+              <h3>Steve McQueen Tribute</h3>
+              <p>A site thrown together for an example project</p>
+            </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    <div class="row cd-section" id = "section3">
+      <div class="col-8 offset-2 col-md-5">
+        <h2>Hello there!</h2>
+        <p>I am a web designer/developer currently working with the web design company Pier5. I'm focused on front end development, but am delving into the mysterious world of back end develpment as time allows.
+      </div>
+      <div class="col-6 offset-3 col-md-3 offset-md-0 headshot">
+        <img src="https://cloud.githubusercontent.com/assets/28717999/26478988/18747724-419e-11e7-8996-8f6bd8d576e3.jpg" class="img-fluid " />
+      </div>
+    </div>
+    <div class="row cd-section" id="section4">
+      <div class="col-12 text-center">
+        <h2>Contact Me</h2>
+      </div>
+      <div class="offset-2 col-md-4">
+        <p>I would love to hear from you. Just fill out this form</p>
+      </div>
+      <div class="col-md-6">
+        <form name="contact-form" action="#" method="post">
+          <label for="name" class="hidden">Name</label>
+          <input type="text" id="name" name="name" placeholder="Name" /><br />
+          <label for="phone-num" class="hidden">Phone Number</label>
+          <input type="text" id="phone-num" name="phone-num" placeholder="Phone Number" /><br />
+          <label for="e-mail" class="hidden">E-mail</label>
+          <input type="text" id="e-mail" name="e-mail" placeholder="E-mail Address" /><br />
+          <label for="message" class="hidden">Message</label>
+          <textarea name="message" id="message" placeholder="Your Message"></textarea></br>
+          <label for="submit" class="hidden">Submit</label>
+          <input type="submit" id="submit" name="submit" value="Submit" />
+        </form>
+      </div>
+    </div>
+    </div>
+  </main>
+  <footer id="main-footer">
+    <div class="container-fluid">
+      <div class="row text-center">
+        <div class="col-sm-8 text-sm-left">
+          <h3>Designed by <a href = "#" target = "blank">jRhoades<a></h3>
+        </div>
+        <div class="col-1 offset-4 offset-sm-1">
+        </div>
+        <div class="col-1">
+        </div>
+        <div class="col-1">
+        </div>
+      </div>
+    </div>
+  </footer>
+   <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  <script src="js/scripts.js"></script>
+  </body>
+</html>
