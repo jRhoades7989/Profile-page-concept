@@ -295,6 +295,10 @@ ul {
   padding-right: 0;
 }
 
+.headshot img {
+    max-height: 100%;
+}
+
 /*Contact Styles*/
 form {
     background-color: rgba(165, 73, 74, 0.6);
@@ -302,6 +306,7 @@ form {
     margin-right: -15px;
 }
 [type=text], #message {
+    padding: 5px;
     display: block;
     width: 100%;
     float: left;
@@ -311,6 +316,12 @@ form {
     background: rgba(255,255,255,0.3);
     margin-bottom: 15px;
 }
+
+[type=text]:focus, #message:focus {
+    outline: none;
+    transform: scale(1.01);
+}
+    
 /*Media Queries*/
 
 /*Global*/
@@ -329,7 +340,9 @@ form {
 
 
 @media screen and (max-width: 767px) {
-  
+    .cd-section  { 
+        height: 100vh;
+    }
   #mcqueen {
     margin-left: 16.66667%;
   }
