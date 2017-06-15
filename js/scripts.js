@@ -1,21 +1,14 @@
 $(document).ready( function () {
-    
+
+//This keeps the header full screen independent of screen size
     $(window).resize(function() {
         $('.header-full').css('height', window.innerHeight+'px');
         $('main').css('margin-top', window.innerHeight + 'px');
-    });
+        });
 
-    //Nav Functions
-    var contentSections, navigationItems;
-    $(document).ready(function(){
-        contentSections = $('.cd-section');
-        navigationItems = $('#cd-vertical-nav a');
-        updateNavigation();
-        $(window).scroll(function(){updateNavigation();});
-    });
-		
-
-
+//This is for the dot navigation
+    var contentSections = $('.cd-section');
+    var navigationItems = $('#cd-vertical-nav a');
 
     function updateNavigation() {
         contentSections.each(function(){
@@ -23,22 +16,19 @@ $(document).ready( function () {
         var activeSection = $('#cd-vertical-nav a[href="#'+$this.attr('id')+'"]').data('number') - 1;
         if ( ( $this.offset().top - $(window).height()/4 < $(window).scrollTop() ) && ( $this.offset().top + $this.height() - $(window).height()/4 > $(window).scrollTop() ) ) {
           navigationItems.eq(activeSection).addClass('is-selected');
+            console.log($this);
         }else {
           navigationItems.eq(activeSection).removeClass('is-selected');
         }
         });
     }
 
-  
-    $("[placeholder]").focus(function () {
-        var placeholder = $(this).attr("placeholder"); 
-        $(this).attr("placeholder", "").blur(function () {
-            $(this).attr("placeholder", placeholder);
-        });
-    });
+//this is to set the selected section on load
+    updateNavigation();
+//this changes the selected dot as one scrolls 
+    $(window).scroll(updateNavigation);
 
-
-    $(document).ready(function(){
+//This is supposed to make smooth scrolling happen when a nav 
   $("a [href^='#']").on('click', function(event) {
 
       // Prevent default anchor click behavior
@@ -55,6 +45,14 @@ $(document).ready( function () {
         window.location.hash = hash;
       });
   });
-});
+
+//This makes the placeholder text in the forms dissapear when focused
+    $("[placeholder]").focus(function () {
+        var placeholder = $(this).attr("placeholder"); 
+        $(this).attr("placeholder", "").blur(function () {
+            $(this).attr("placeholder", placeholder);
+        });
+    });
+
 });
 
